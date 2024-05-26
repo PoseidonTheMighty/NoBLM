@@ -4,18 +4,8 @@ function addToCart(product) {
     
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
     let message = `Prodotto aggiunto al carrello:\n\nNome: ${product.name}\nPrezzo: €${product.price.toFixed(2)}`;
-
-    // Controlla se il prodotto è già presente nel carrello
-    let existingProductIndex = cart.findIndex(item => item.name === product.name);
-
-    if (existingProductIndex >=0) {
-        // Se il prodotto è già presente, aumenta la quantità
-        cart[existingProductIndex].quantity++;
-    } else {
-        // Se il prodotto non è già presente, aggiungilo al carrello
-        localStorage.setItem('cart', JSON.stringify(cart));
-    }
 
     if(num>=10){
         alert(message);

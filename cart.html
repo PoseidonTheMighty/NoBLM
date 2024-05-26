@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="CSS/cart.css">
+    <script src="..\JS/cart.js"></script>
 </head>
 <body>
     <nav>
@@ -45,10 +46,7 @@
                     <a href="unisex\calzini.html">Calzini</a>
                     </div>
             </div>
-        <a href="Login\login.html">
-            <span></span>
-            <button id="login" class="nav_but">Login</button>
-        </a>
+        
         <a href="#">
             <span></span>
             <button id="profile" class="nav_but_profile">
@@ -61,15 +59,31 @@
                 <a id="logout" href="#">Logout</a>
             </div>
         </a>
-        
-        <a href="cart.html">
-            <span></span>
-            <button id="cart" class="nav_but_cart">
-                <img src="immagini/klipartz.com.png" alt="buttonpng"/>
-            </button>
-        </a>
     </nav>
 
+    <main>
+        <div class="cart-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prodotto</th>
+                        <th>Prezzo</th>
+                        <th>Quantità</th>
+                        <th>Totale</th>
+                        <th>Rimuovi</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                </tbody>
+            </table>
+        </div>
+        <div class="cart-total">
+            <h2>Totale Carrello: €<span id="total-price">0.00</span></h2>
+            <button class="procedi" id="checkout-btn">Procedi al Checkout</button>
+        </div>
+    </main>
+
+    <script type="module" src="JS/cart.js" defer></script>
     <script type="module" src="JS/script.js" defer></script>
 </body>
 </html>
