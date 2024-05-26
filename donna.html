@@ -52,7 +52,26 @@
             </div>
         <a href="Login\login.html">
             <span></span>
-            <button class="nav_but">Login</button>
+            <button id="login" class="nav_but">Login</button>
+        </a>
+        <a href="#">
+            <span></span>
+            <button id="profile" class="nav_but_profile">
+                <img src="immagini/pngwing.com (5).png" alt="buttonpng"/>
+            </button>
+            <!-- Dropdown menu -->
+            <div class="dropdown-content-profile" id="profileDropdown">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a id="logout" href="#">Logout</a>
+            </div>
+        </a>
+        
+        <a href="cart.html">
+            <span></span>
+            <button id="cart" class="nav_but_cart">
+                <img src="immagini/klipartz.com.png" alt="buttonpng"/>
+            </button>
         </a>
     </nav>
 
@@ -158,5 +177,7 @@
             </div>
         </div>
    </footer>
+
+   <script type="module" src="JS/script.js" defer></script>
 </body>
 </html>
