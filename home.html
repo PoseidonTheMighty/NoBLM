@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="immagini/BLM-Logo.png" type="favicon/png" />
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
+    
 </head>
 <body>
     
@@ -51,10 +51,23 @@
             <span></span>
             <button id="login" class="nav_but">Login</button>
         </a>
-        <a href="profile.html">
+        <a href="#">
             <span></span>
             <button id="profile" class="nav_but_profile">
                 <img src="immagini/pngwing.com (5).png" alt="buttonpng"/>
+            </button>
+            <!-- Dropdown menu -->
+            <div class="dropdown-content-profile" id="profileDropdown">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a id="logout" href="#">Logout</a>
+            </div>
+        </a>
+        
+        <a href="cart.html">
+            <span></span>
+            <button id="cart" class="nav_but_cart">
+                <img src="immagini/klipartz.com.png" alt="buttonpng"/>
             </button>
         </a>
     </nav>
@@ -65,7 +78,7 @@
         <h4>Compra ora </h4>
         <a href="Login\login.html">
             <span></span>
-            <button class="nav_but">Login</button>
+            <button id="login_to_shop" class="nav_but">Login</button>
         </a>
     </section>
     
@@ -291,6 +304,6 @@
    </footer>
 
    
-   <script src="script.js"></script>
+   <script type="module" src="JS/script.js" defer></script>
 </body>
 </html>
