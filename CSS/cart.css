@@ -195,3 +195,52 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  header {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.cart-container {
+    width: 80%;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+.cart-total {
+    width: 80%;
+    margin: 2rem auto;
+    text-align: right;
+}
+
+button {
+  background: #252525;
+  color: #fff;
+  padding: 10px 35px;
+  border: none;
+  border-radius: 50px;
+  line-height: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
