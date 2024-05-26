@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Bikini</title>
 </head>
 <body>
@@ -50,10 +51,29 @@
                     <a href="../unisex\calzini.html">Calzini</a>
                     </div>
             </div>
-        <a href="../Login\login.html">
-            <span></span>
-            <button class="nav_but">Login</button>
-        </a>
+            <a href="../Login\login.html">
+                <span></span>
+                <button id="login" class="nav_but">Login</button>
+            </a>
+            <a href="#">
+                <span></span>
+                <button id="profile" class="nav_but_profile">
+                    <img src="../immagini/pngwing.com (5).png" alt="buttonpng"/>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="dropdown-content-profile" id="profileDropdown">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a id="logout" href="#">Logout</a>
+                </div>
+            </a>
+            
+            <a href="../cart.html">
+                <span></span>
+                <button id="cart" class="nav_but_cart">
+                    <img src="../immagini/klipartz.com.png" alt="buttonpng"/>
+                </button>
+            </a>
     </nav>
 
     <section class="container">
@@ -79,7 +99,7 @@
 
                 <p class="price">€14.99</p>
 
-                <button>Compra Ora</button>
+                <button id="add_cart" value="bikini" class="compraOra">Compra Ora</button>
             </div>
         </div>
         
@@ -128,5 +148,8 @@
             </div>
         </div>
    </footer>
+
+   <script src="../JS/image-slider.js"></script>
+   <script type="module" src="../JS/script.js" defer></script>
 </body>
 </html>
