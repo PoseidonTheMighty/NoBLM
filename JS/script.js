@@ -36,6 +36,7 @@ const profile_but = document.getElementById('profile');
 const cart_but = document.getElementById('cart');
 const login_but = document.getElementById('login');
 const login_shop = document.getElementById('login_to_shop');
+const login_shop_link = document.getElementById('login_to_shop_link');
 const profileDropdown = document.getElementById('profileDropdown');
 const logoutButton = document.getElementById('logout');
 
@@ -67,6 +68,7 @@ onAuthStateChanged(auth, (user) => {
         login_but.style.display = 'none';
         login_shop.value = "Shop";
         login_shop.textContent = "Shop"; 
+        login_shop_link.href = '../shop.html';
 
     } else {
         // No user is signed in
