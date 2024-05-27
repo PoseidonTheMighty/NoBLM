@@ -1,15 +1,26 @@
-var num=10;
+var num = 10;
+const checkot_btn = document.getElementById('checkout-btn');
+
+checkot_btn.addEventListener('click', function(e) {
+    alert("Sito sotto Manutenzione\nSara possibile ordinare tra cinque anni");
+});
 
 function addToCart(product) {
-    
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push(product);
+    let existingProductIndex = cart.findIndex(item => item.name === product.name);
+
+    if (existingProductIndex > -1) {
+        cart[existingProductIndex].quantity += product.quantity;
+    } else {
+        cart.push(product);
+    }
+
     localStorage.setItem('cart', JSON.stringify(cart));
     let message = `Prodotto aggiunto al carrello:\n\nNome: ${product.name}\nPrezzo: €${product.price.toFixed(2)}`;
 
-    if(num>=10){
+    if (num >= 10) {
         alert(message);
-        num--
+        num--;
     }
 }
 
@@ -25,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 quantity: 1
             };
 
-            if(num>=10){
+            if (num >= 10) {
                 addToCart(product);
             }
             
@@ -51,7 +62,11 @@ function displayCart() {
         let removeButton = document.createElement('button');
         removeButton.innerText = 'Rimuovi';
         removeButton.addEventListener('click', function() {
-            cart.splice(index, 1);
+            if (item.quantity > 1) {
+                cart[index].quantity--;
+            } else {
+                cart.splice(index, 1);
+            }
             localStorage.setItem('cart', JSON.stringify(cart));
             displayCart();
         });

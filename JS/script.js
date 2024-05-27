@@ -45,6 +45,7 @@ logoutButton.addEventListener('click', () => {
     signOut(auth).then(() => {
         // Sign-out successful.
         // After sign-out, you may want to redirect the user to a different page or perform any other action.
+        window.location.href = '../home.html';
         console.log("User signed out successfully");
     }).catch((error) => {
         // An error happened.
@@ -68,7 +69,7 @@ onAuthStateChanged(auth, (user) => {
         login_but.style.display = 'none';
         login_shop.value = "Shop";
         login_shop.textContent = "Shop"; 
-        login_shop_link.href = '../shop.html';
+        changeButtonLink()
 
     } else {
         // No user is signed in
@@ -79,5 +80,30 @@ onAuthStateChanged(auth, (user) => {
         login_shop.textContent = "Login"; 
     }
 });
+
+function generateRandomNumber() {
+    return Math.floor(Math.random() * 4); // Generates a number between 0 and 3
+}
+
+function changeButtonLink() {
+    const randomNumber = generateRandomNumber();
+
+    switch (randomNumber) {
+        case 0:
+            login_shop_link.href = 'uomo.html';
+            break;
+        case 1:
+            login_shop_link.href = 'donna.html';
+            break;
+        case 2:
+            login_shop_link.href = 'bambini.html';
+            break;
+        case 3:
+            login_shop_link.href = 'unisex.html';
+            break;
+        default:
+            login_shop_link.href = 'home.html'; // Default case
+    }
+}
 
 
